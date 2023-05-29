@@ -1,4 +1,3 @@
-//mobile menu
 const burgerIcon = document.querySelector('#burger');
 const navbarMenu = document.querySelector('#nav-links');
 
@@ -26,9 +25,8 @@ tabs.forEach((tab) => {
   })
 })
 
-
 // modal
-const signupButton = document.querySelector('#signup');
+/*const signupButton = document.querySelector('#signup');
 const modalBg = document.querySelector('.modal-background');
 const modal = document.querySelector('.modal');
 
@@ -39,3 +37,18 @@ signupButton.addEventListener('click', () => {
 modalBg.addEventListener('click', () => {
   modal.classList.remove('is-active');
 })
+*/
+
+const signupButton = document.querySelector('#signup');
+const modalBg = document.querySelector('.modal-background');
+const modal = document.querySelector('.modal');
+
+modal.classList.remove('is-active'); // Hide the modal initially
+
+signupButton.addEventListener('click', () => {
+  modal.classList.add('is-active');
+});
+
+modalBg.addEventListener('click', () => {
+  modal.classList.remove('is-active');
+});
